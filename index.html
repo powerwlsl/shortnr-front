@@ -31,30 +31,37 @@
     <div class="main-container">
       <div class="main wrapper clearfix">
         <div class="dark-box">
+          <h2 style="color: white; margin: 0">Try shortnr API for free!</h2>
+          <h4 class="secondary" style="margin: 10px">5 free trial left</h4>
           <input type="text" name="longUrl" class="url-input" placeholder="Make your link shorter">
           <button class="primary url-submit">Shorten</button>
           <span>By clicking shorten, you agree to Rebrandly"s <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></span>
         </div>
 
-        <div class="right">
-          <h4>Live Feed</h4>
-          <div class="light-box live-feed">
-            <pre id="live-feed"></pre>
+
+
+        <!-- Tab links -->
+        <div class="tab-pannel-wrapper">
+          <div class="tab">
+            <button class="tablinks active" onclick="openCity(event, 'liveFeed')">Live Feed</button>
+            <button class="tablinks" onclick="openCity(event, 'analyticsFeed')">Analytics</button>
+            <button class="tablinks" href="#">And more..</button>
+          </div>
+          <div id="outer-box">
+            <!-- Tab content -->
+            <div id="liveFeed" class="tabcontent" style="display: block">
+              <pre id="live-feed"></pre>
+            </div>
+
+            <div id="analyticsFeed" class="tabcontent">
+              <pre id="analytics"></pre>
+            </div>
+
+            <div id="inner-box">
+              <h2>Create a short link first to see the result.</h2>
+            </div>
           </div>
         </div>
-
-        <div class="left">
-          <h4>Analytics <a href="#" style="float:right"><img src="refresh.png" alt="shortnr" height="15"></a href="#"></h4>
-
-          <div class="light-box analytics">
-            <pre id="analytics"></pre>
-          </div>
-        </div>
-
-        <div>
-          <button class="secondary more-button">And more..</button>
-        </div>
-
         <div class="container">
           <div class="info">
             <img src="developer.png" alt="shortnr" height="45">
@@ -132,6 +139,29 @@
 
       document.getElementById("live-feed").innerHTML = JSON.stringify(liveFeed, undefined, 2);
       document.getElementById("analytics").innerHTML = JSON.stringify(analytics, undefined, 2);
+    </script>
+
+    <script>
+      function openCity(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace("active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
     </script>
   </body>
 </html>
