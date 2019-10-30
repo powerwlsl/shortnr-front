@@ -88,8 +88,10 @@ body {
   overflow: hidden;
   position: fixed;
   top: 0;
-	width: 100%;
-	background: #fff;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  z-index: 10;
 }
 
 .header-container a {
@@ -98,6 +100,10 @@ body {
 
 .header-container .right {
 	float: right;
+}
+
+.header-container .logo {
+    margin-top: 5px;
 }
 
 .footer-container,
@@ -249,7 +255,7 @@ nav a {
 
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
-        margin: 15px auto;
+        margin: 3px auto;
     }
 }
 
@@ -368,7 +374,8 @@ nav a {
 	padding: 50px 100px 30px 100px;
 	background: #062748;
 	text-align: center;
-	margin-bottom: 35px;
+    margin-bottom: 80px;
+    margin-top: 50px;
 }
 
 
@@ -387,7 +394,8 @@ nav a {
 
 .dark-box .url-submit {
 	width: 25%;
-	float: right;
+    float: right;
+    margin-left: 10px;
 }
 
 
@@ -454,13 +462,14 @@ button.secondary:hover {
 	width: 100%;
 }
 
-.container {
+.info-container {
   display: flex;
+  margin-bottom: 50px;
 }
-.container .info {
+.info-container .info {
 	flex: 1;
 	height: 200px;
-	margin: 60px 20px;
+	margin: 30px 20px;
 }
 
 
@@ -496,12 +505,13 @@ button.secondary:hover {
   display: none;
   padding: 6px 12px;
 	border-top: none;
-	background: #24303e;
-	color: #fff;
+  background: #24303e;
+  color: #fff;
 }
 
 .tab-pannel-wrapper {
-	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.19);
+  margin-bottom: 130px;
 }
 
 #outer-box {
@@ -530,4 +540,11 @@ button.secondary:hover {
 #outer-box #inner-box {
   opacity: .9;
   transition: opacity .5s;
+}
+
+.section-title {
+	font-size: 36px;
+	text-align: center;
+	font-weight: normal;
+	color: #062648;
 }
