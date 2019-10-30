@@ -425,7 +425,7 @@ nav a {
 }
 
 
-button.primary {
+.btn-primary {
 	border-radius: 4px;
 	background-color: #2281c2;
 	color: #fff;
@@ -436,11 +436,11 @@ button.primary {
 	border-color: #2281c2;
 }
 
-button.primary:hover {
+.btn-primary:hover {
 	background-color: #2c96df;
 }
 
-button.secondary {
+.btn-secondary {
 
 	border-radius: 4px;
 	border: 1px solid #2281c2;
@@ -452,7 +452,7 @@ button.secondary {
 	height: 45px;
 }
 
-button.secondary:hover {
+.btn-secondary:hover {
 	border-color: #2c96df;
 	background-color: #2c96df;
 	color: #fff;
@@ -511,7 +511,7 @@ button.secondary:hover {
 
 .tab-pannel-wrapper {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.19);
-  margin-bottom: 130px;
+  margin-bottom: 80px;
 }
 
 #outer-box {
@@ -543,7 +543,7 @@ button.secondary:hover {
 }
 
 .section-title {
-	font-size: 36px;
+	font-size: 30px;
 	text-align: center;
 	font-weight: normal;
 	color: #062648;
